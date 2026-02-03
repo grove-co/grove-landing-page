@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Custom theme for Grove */
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Forest green primary palette */
+  --color-grove-50: #f0fdf4;
+  --color-grove-100: #dcfce7;
+  --color-grove-200: #bbf7d0;
+  --color-grove-300: #86efac;
+  --color-grove-400: #4ade80;
+  --color-grove-500: #22c55e;
+  --color-grove-600: #16a34a;
+  --color-grove-700: #15803d;
+  --color-grove-800: #166534;
+  --color-grove-900: #14532d;
+  
+  /* Warm neutrals */
+  --color-warm-50: #fafaf9;
+  --color-warm-100: #f5f5f4;
+  --color-warm-200: #e7e5e4;
+  --color-warm-300: #d6d3d1;
+  --color-warm-400: #a8a29e;
+  --color-warm-500: #78716c;
+  --color-warm-600: #57534e;
+  --color-warm-700: #44403c;
+  --color-warm-800: #292524;
+  --color-warm-900: #1c1917;
+}

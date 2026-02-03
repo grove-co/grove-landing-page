@@ -1,0 +1,98 @@
+---
+const projects = [
+  {
+    name: 'Events Webapp',
+    description: 'A full-stack event management platform built with modern web technologies. Features include event creation, RSVP management, and calendar integration.',
+    tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+    status: 'Active',
+    contributors: 4,
+    issues: 12
+  },
+  {
+    name: 'Community Hub',
+    description: 'An open-source platform for managing community groups, discussions, and resources. Currently in early development—great for getting in on the ground floor.',
+    tech: ['Next.js', 'Prisma', 'Tailwind'],
+    status: 'Seeking contributors',
+    contributors: 2,
+    issues: 8
+  }
+];
+---
+
+<section id="projects" class="py-20 sm:py-28 bg-warm-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-warm-900 mb-4">
+        Current projects
+      </h2>
+      <p class="text-lg text-warm-600 max-w-2xl mx-auto">
+        Real apps. Real users. Real impact. These aren't toy projects—your code matters.
+      </p>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="grid md:grid-cols-2 gap-8">
+      {projects.map(project => (
+        <div class="bg-white rounded-2xl p-8 border border-warm-200 hover:border-grove-300 transition-colors">
+          <!-- Status badge -->
+          <div class="flex items-center justify-between mb-4">
+            <span class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium ${
+              project.status === 'Active' 
+                ? 'bg-grove-100 text-grove-700' 
+                : 'bg-amber-100 text-amber-700'
+            }`}>
+              <span class={`w-1.5 h-1.5 rounded-full ${
+                project.status === 'Active' ? 'bg-grove-500' : 'bg-amber-500'
+              }`}></span>
+              {project.status}
+            </span>
+            <div class="flex items-center gap-4 text-sm text-warm-500">
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+                {project.contributors}
+              </span>
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+                {project.issues} issues
+              </span>
+            </div>
+          </div>
+
+          <!-- Project info -->
+          <h3 class="text-2xl font-semibold text-warm-900 mb-3">{project.name}</h3>
+          <p class="text-warm-600 mb-6 leading-relaxed">{project.description}</p>
+
+          <!-- Tech stack -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            {project.tech.map(tech => (
+              <span class="px-3 py-1 bg-warm-100 text-warm-700 rounded-lg text-sm font-medium">
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <!-- CTA -->
+          <a 
+            href="#join" 
+            class="inline-flex items-center gap-2 text-grove-600 hover:text-grove-700 font-medium transition-colors"
+          >
+            View project
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- More coming -->
+    <p class="text-center mt-12 text-warm-500">
+      More projects launching soon. <a href="#join" class="text-grove-600 hover:underline">Join the Discord</a> to get early access.
+    </p>
+  </div>
+</section>
