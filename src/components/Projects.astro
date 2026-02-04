@@ -1,12 +1,13 @@
 ---
 const projects = [
   {
-    name: 'Events Webapp',
-    description: 'A full-stack event management platform built with modern web technologies. Features include event creation, RSVP management, and calendar integration.',
+    name: 'WhatsUp',
+    description: 'One link for all your group\'s events. A platform where communities can create a beautiful page to share upcoming events and let members RSVP in seconds.',
     tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
     status: 'Active',
     contributors: 4,
-    issues: 12
+    issues: 12,
+    url: 'https://heywhatsup.app/'
   },
   {
     name: 'Community Hub',
@@ -14,7 +15,8 @@ const projects = [
     tech: ['Next.js', 'Prisma', 'Tailwind'],
     status: 'Seeking contributors',
     contributors: 2,
-    issues: 8
+    issues: 8,
+    url: null
   }
 ];
 ---
@@ -78,7 +80,9 @@ const projects = [
 
           <!-- CTA -->
           <a 
-            href="#join" 
+            href={project.url || "#join"} 
+            target={project.url ? "_blank" : undefined}
+            rel={project.url ? "noopener noreferrer" : undefined}
             class="inline-flex items-center gap-2 text-grove-600 hover:text-grove-700 font-medium transition-colors"
           >
             View project
