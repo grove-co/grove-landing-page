@@ -1,102 +1,82 @@
 ---
-const projects = [
+const tracks = [
   {
-    name: 'WhatsUp',
-    description: 'One link for all your group\'s events. A platform where communities can create a beautiful page to share upcoming events and let members RSVP in seconds.',
-    tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-    status: 'Active',
-    contributors: 4,
-    issues: 12,
-    url: 'https://heywhatsup.app/'
+    emoji: '🛠️',
+    name: 'Real Coding Experience',
+    description: 'Contribute to live open-source projects with real users. Get code reviews from experienced developers, build your GitHub portfolio, and ship features that matter.',
+    forYouIf: 'You want hands-on coding experience',
+    commitment: 'Flexible, a few hours/week',
+    highlights: ['Production codebases', 'Code reviews', 'Portfolio building']
   },
   {
-    name: 'Community Hub',
-    description: 'An open-source platform for managing community groups, discussions, and resources. Currently in early development—great for getting in on the ground floor.',
-    tech: ['Next.js', 'Prisma', 'Tailwind'],
-    status: 'Seeking contributors',
-    contributors: 2,
-    issues: 8,
-    url: null
+    emoji: '💼',
+    name: 'Career Mentorship',
+    description: 'Get 1:1 mentorship focused on your career. Resume reviews, mock interviews, LinkedIn optimization, networking help, and advice from professionals in the industry.',
+    forYouIf: 'You want career guidance (no coding required)',
+    commitment: 'Occasional sessions',
+    highlights: ['Resume feedback', 'Mock interviews', 'Networking help']
+  },
+  {
+    emoji: '🎓',
+    name: 'Transfer Support Network',
+    description: 'Navigating the transfer process to a 4-year university? Get connected with students from our network of 1,600+ students who\'ve been through it and can help you find your footing.',
+    forYouIf: 'You\'re a transfer student',
+    commitment: 'Flexible, as needed',
+    highlights: ['Peer connections', 'Campus insights', 'Transfer guidance']
   }
 ];
 ---
 
-<section id="projects" class="py-20 sm:py-28 bg-warm-50">
+<section id="tracks" class="py-20 sm:py-28 bg-warm-50">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="text-center mb-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-warm-900 mb-4">
-        Current projects
+        Three ways to get involved
       </h2>
       <p class="text-lg text-warm-600 max-w-2xl mx-auto">
-        Real apps. Real users. Real impact. These aren't toy projects—your code matters.
+        Everyone's journey is different. Choose what fits you—or try them all.
       </p>
     </div>
 
-    <!-- Project Cards -->
-    <div class="grid md:grid-cols-2 gap-8">
-      {projects.map(project => (
-        <div class="bg-white rounded-2xl p-8 border border-warm-200 hover:border-grove-300 transition-colors">
-          <!-- Status badge -->
-          <div class="flex items-center justify-between mb-4">
-            <span class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium ${
-              project.status === 'Active' 
-                ? 'bg-grove-100 text-grove-700' 
-                : 'bg-amber-100 text-amber-700'
-            }`}>
-              <span class={`w-1.5 h-1.5 rounded-full ${
-                project.status === 'Active' ? 'bg-grove-500' : 'bg-amber-500'
-              }`}></span>
-              {project.status}
+    <!-- Track Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+      {tracks.map(track => (
+        <div class="bg-white rounded-2xl p-8 border border-warm-200 hover:border-grove-300 transition-colors flex flex-col">
+          <!-- Emoji -->
+          <div class="text-4xl mb-4">{track.emoji}</div>
+
+          <!-- Track info -->
+          <h3 class="text-2xl font-semibold text-warm-900 mb-3">{track.name}</h3>
+          <p class="text-warm-600 mb-6 leading-relaxed flex-grow">{track.description}</p>
+
+          <!-- For you if -->
+          <div class="mb-4">
+            <span class="text-sm font-medium text-grove-700 bg-grove-50 px-3 py-1 rounded-full">
+              {track.forYouIf}
             </span>
-            <div class="flex items-center gap-4 text-sm text-warm-500">
-              <span class="flex items-center gap-1">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-                </svg>
-                {project.contributors}
-              </span>
-              <span class="flex items-center gap-1">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-                </svg>
-                {project.issues} issues
-              </span>
-            </div>
           </div>
 
-          <!-- Project info -->
-          <h3 class="text-2xl font-semibold text-warm-900 mb-3">{project.name}</h3>
-          <p class="text-warm-600 mb-6 leading-relaxed">{project.description}</p>
-
-          <!-- Tech stack -->
-          <div class="flex flex-wrap gap-2 mb-6">
-            {project.tech.map(tech => (
-              <span class="px-3 py-1 bg-warm-100 text-warm-700 rounded-lg text-sm font-medium">
-                {tech}
+          <!-- Highlights -->
+          <div class="flex flex-wrap gap-2 mb-4">
+            {track.highlights.map(highlight => (
+              <span class="px-3 py-1 bg-warm-100 text-warm-700 rounded-lg text-sm">
+                {highlight}
               </span>
             ))}
           </div>
 
-          <!-- CTA -->
-          <a 
-            href={project.url || "#join"} 
-            target={project.url ? "_blank" : undefined}
-            rel={project.url ? "noopener noreferrer" : undefined}
-            class="inline-flex items-center gap-2 text-grove-600 hover:text-grove-700 font-medium transition-colors"
-          >
-            View project
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          <!-- Commitment -->
+          <p class="text-sm text-warm-500 mt-auto">
+            <span class="font-medium">Commitment:</span> {track.commitment}
+          </p>
         </div>
       ))}
     </div>
 
-    <!-- More coming -->
+    <!-- Entry point callout -->
     <p class="text-center mt-12 text-warm-500">
-      More projects launching soon. <a href="#join" class="text-grove-600 hover:underline">Join the Discord</a> to get early access.
+      Not sure where to start? Join our Discord and we'll help you find the right track for you.
     </p>
   </div>
 </section>

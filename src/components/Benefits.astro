@@ -3,22 +3,38 @@ const benefits = [
   {
     title: 'Portfolio-ready work',
     description: 'Ship features to production apps with real users. Your contributions show up on GitHub where recruiters actually look.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>`,
+    track: 'Coding'
   },
   {
     title: 'Real code reviews',
-    description: 'Get feedback from senior engineers who do this professionally. Learn patterns, best practices, and the "why" behind good code.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`
+    description: 'Get feedback from experienced developers who do this professionally. Learn patterns, best practices, and the "why" behind good code.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+    track: 'Coding'
+  },
+  {
+    title: 'Resume & interview help',
+    description: 'Get 1:1 resume reviews, mock interviews, and LinkedIn optimization from professionals who know what hiring managers look for.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>`,
+    track: 'Career'
+  },
+  {
+    title: 'Professional network',
+    description: 'Build real relationships with working professionals. These aren\'t just LinkedIn connections—they\'re people who know your work.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>`,
+    track: 'Career'
   },
   {
     title: 'Professional references',
-    description: 'Work with us consistently, and we\'ll vouch for you. References from working engineers carry weight with hiring managers.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>`
+    description: 'Engage consistently in any track, and we\'ll vouch for you. References from working professionals carry weight with hiring managers.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>`,
+    track: 'All tracks'
   },
   {
-    title: 'Genuine community',
-    description: 'College can be isolating. Grove is a place where you belong—people who will celebrate your wins and help you through the hard parts.',
-    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`
+    title: 'Transfer support',
+    description: 'Transferring to a 4-year university is a big transition. Get connected with students who\'ve navigated it and can help you find your footing at your new school.',
+    icon: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 7l-9-5 9-5 9 5-9 5z"/></svg>`,
+    track: 'Transfer'
   }
 ];
 ---
@@ -31,12 +47,12 @@ const benefits = [
         What you actually get
       </h2>
       <p class="text-lg text-warm-600 max-w-2xl mx-auto">
-        Not vague promises. Concrete things that help you land jobs and grow as an engineer.
+        Not vague promises. Concrete things that help you land jobs, grow your skills, and find your people.
       </p>
     </div>
 
     <!-- Benefits Grid -->
-    <div class="grid sm:grid-cols-2 gap-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {benefits.map(benefit => (
         <div class="flex gap-5">
           <div class="flex-shrink-0 w-12 h-12 bg-grove-100 rounded-xl flex items-center justify-center text-grove-600">
@@ -58,7 +74,7 @@ const benefits = [
           <svg class="w-5 h-5 text-warm-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
           </svg>
-          <span class="text-warm-700">A coding bootcamp or tutoring service</span>
+          <span class="text-warm-700">A tutoring service or bootcamp</span>
         </li>
         <li class="flex items-start gap-3">
           <svg class="w-5 h-5 text-warm-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
