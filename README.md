@@ -35,7 +35,7 @@ Open [http://localhost:4321](http://localhost:4321) to view the site.
 │   │   ├── Projects.astro   # Featured projects
 │   │   ├── Benefits.astro   # What you get
 │   │   ├── FAQ.astro        # Common questions
-│   │   ├── CTA.astro        # Discord join CTA
+│   │   ├── CTA.astro        # Interest form CTA
 │   │   └── Footer.astro     # Site footer
 │   ├── layouts/
 │   │   └── Layout.astro     # Base HTML layout
@@ -70,9 +70,9 @@ Astro builds to static HTML. The ./dist/ folder can be deployed to any static ho
 
 ## Customization
 
-### Discord Link
+### Interest Form Link
 
-Update the Discord invite URL in src/components/CTA.astro
+Update the interest form URL in src/components/CTA.astro (and other components that link to it)
 
 ### Projects
 
